@@ -48,7 +48,36 @@ const OurParents: React.FC = () => {
             Florinda Vargas De Ramirez
           </p>
         </div>
-
+      {/* Card 3: Lluvia de Sobres */}
+      <div className={cardStyle}>
+          <div className={iconStyle}>
+            {/* Applying fill directly as this SVG uses fill */}
+            <FaMapMarkerAlt size={50}/>
+          </div>
+          <h2 className={`${titleStyle} ${titleFont.className} font-medium`}>
+            Consejo bíblico
+          </h2>
+          <div className="font-serif text-sm md:text-base text-brand-text-body leading-normal mb-6"> {/* Estilo de la dirección */}
+            {addressJW.map((line, index) => (
+              // Renderiza cada línea de la dirección en un párrafo separado
+              <p key={index}>{line}</p>
+            ))}
+          </div>
+          {/* Botón */}
+          <a
+            href={'https://www.google.com/maps/place/Salon+Del+Reino/@-17.4422536,-66.1175844,17z/data=!3m1!4b1!4m6!3m5!1s0x93e371bd5eaca22d:0xa55c717c551c7f49!8m2!3d-17.4422536!4d-66.1175844!16s%2Fg%2F11f29xq_39?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D'}
+            target="_blank" // Abrir en nueva pestaña
+            rel="noopener noreferrer" // Buenas prácticas
+            // Estilo del botón: borde, texto, padding, hover
+            className="inline-block border border-brand-text-title text-brand-text-title
+                   font-semibold text-xs uppercase tracking-wider
+                   py-2.5 px-8 rounded
+                   hover:bg-brand-text-title hover:text-brand-background-light
+                   transition-colors duration-200 ease-in-out"
+          >
+            Como llegar
+          </a>
+        </div>
 
         {/* Card 2: Recomendaciones */}
         <div className={cardStyle}>
@@ -79,42 +108,13 @@ const OurParents: React.FC = () => {
           >
             Como llegar
           </a>
-        </div>
-
-
-        {/* Card 3: Lluvia de Sobres */}
-        <div className={cardStyle}>
-          <div className={iconStyle}>
-            {/* Applying fill directly as this SVG uses fill */}
-            <FaMapMarkerAlt size={50}/>
-          </div>
-          <h2 className={`${titleStyle} ${titleFont.className} font-medium`}>
-            Consejo bíblico
-          </h2>
-          <div className="font-serif text-sm md:text-base text-brand-text-body leading-normal mb-6"> {/* Estilo de la dirección */}
-            {addressJW.map((line, index) => (
-              // Renderiza cada línea de la dirección en un párrafo separado
-              <p key={index}>{line}</p>
-            ))}
-          </div>
-          {/* Botón */}
-          <a
-            href={'https://www.google.com/maps/place/Salon+Del+Reino/@-17.4422536,-66.1175844,17z/data=!3m1!4b1!4m6!3m5!1s0x93e371bd5eaca22d:0xa55c717c551c7f49!8m2!3d-17.4422536!4d-66.1175844!16s%2Fg%2F11f29xq_39?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D'}
-            target="_blank" // Abrir en nueva pestaña
-            rel="noopener noreferrer" // Buenas prácticas
-            // Estilo del botón: borde, texto, padding, hover
-            className="inline-block border border-brand-text-title text-brand-text-title
-                   font-semibold text-xs uppercase tracking-wider
-                   py-2.5 px-8 rounded
-                   hover:bg-brand-text-title hover:text-brand-background-light
-                   transition-colors duration-200 ease-in-out"
-          >
-            Como llegar
-          </a>
           <p className="text-sm italic font-serif text-gray-600 mt-5 max-w-md">
             Luego del consejo bíblico rogamos encarecidamente que puedan pasar directamente al salón de evento ya que se servirá un aperitivo y acto seguido la recepción
           </p>
         </div>
+
+
+  
 
       </div>
     </div>
