@@ -10,7 +10,7 @@ const addressLines = [
 
 ];
 const addressJW = [
-  "Salón del reino de los Tesgos de Johová",
+  "Salón del reino de los Testigos de Jehová",
   
 ];
 
