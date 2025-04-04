@@ -17,7 +17,7 @@ export default function HomePage() {
     // Define la fecha límite y el enlace de confirmación
     const rsvpDeadline = "10 de Mayo de 2025";
     // ¡IMPORTANTE! Reemplaza '#' con tu enlace real (Formulario, WhatsApp, Email, etc.)
-    const rsvpLink =`https://wa.me/67454317?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
+    const rsvpLink =`https://wa.me/67437595?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
     // Ejemplo enlace WhatsApp (reemplaza con tu número y ajusta el mensaje):
     // const rsvpLink = `https://wa.me/1234567890?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
   return (

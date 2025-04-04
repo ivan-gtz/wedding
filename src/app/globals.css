@@ -5,3 +5,16 @@ html, body {
   padding: 0;
   height: 100%;
 }
+
+body {
+  background-image: url('/imgs/fondo2.jpeg'); /* Ruta relativa a la carpeta public */
+  background-size: cover; /* Cubre todo el área disponible */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* (Opcional) Fija el fondo al hacer scroll */
+  /* Añade un color de fondo de respaldo por si la imagen no carga */
+  background-color: #f0f0f0;
+  /* Asegúrate de que el body o el html ocupen altura si es necesario */
+  min-height: 100vh;
+  margin: 0; /* Resetea márgenes por defecto del body */
+}

@@ -6,15 +6,17 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 
 const addressLines = [
-  "Salón de Fiestas 'El Encanto'",
-  "Avenida Los Álamos 456",
-  "Ciudad Ejemplo, Provincia",
-  "País"
+  "Jalta Cotacachi",
+
+];
+const addressJW = [
+  "Salón del reino de los Tesgos de Johová",
+  
 ];
 
 const OurParents: React.FC = () => {
   // Define base styles for reusability
-  const cardStyle = "bg-stone-100 border border-stone-300 rounded-lg p-6 md:p-8 flex flex-col items-center text-center shadow-lg";
+  const cardStyle = "border border-stone-300 rounded-lg p-6 md:p-8 flex flex-col items-center text-center shadow-lg";
   const iconStyle = "h-12 w-12 text-slate-500 mb-5"; // Adjusted size and margin
   const titleStyle = "text-xl md:text-2xl text-slate-500 mb-3 uppercase tracking-wide";
   const textStyle = "text-sm md:text-base text-stone-700 font-serif max-w-xs"; // Constrain text width slightly
@@ -65,7 +67,7 @@ const OurParents: React.FC = () => {
           </div>
           {/* Botón */}
           <a
-            href={'/'}
+            href={`https://www.google.com/maps/place/17%C2%B027'12.2%22S+66%C2%B010'19.8%22W/@-17.453394,-66.1747299,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-17.453394!4d-66.172155?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D`}
             target="_blank" // Abrir en nueva pestaña
             rel="noopener noreferrer" // Buenas prácticas
             // Estilo del botón: borde, texto, padding, hover
@@ -90,14 +92,14 @@ const OurParents: React.FC = () => {
             Consejo bíblico
           </h2>
           <div className="font-serif text-sm md:text-base text-brand-text-body leading-normal mb-6"> {/* Estilo de la dirección */}
-            {addressLines.map((line, index) => (
+            {addressJW.map((line, index) => (
               // Renderiza cada línea de la dirección en un párrafo separado
               <p key={index}>{line}</p>
             ))}
           </div>
           {/* Botón */}
           <a
-            href={'/'}
+            href={'https://www.google.com/maps/place/Salon+Del+Reino/@-17.4422536,-66.1175844,17z/data=!3m1!4b1!4m6!3m5!1s0x93e371bd5eaca22d:0xa55c717c551c7f49!8m2!3d-17.4422536!4d-66.1175844!16s%2Fg%2F11f29xq_39?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D'}
             target="_blank" // Abrir en nueva pestaña
             rel="noopener noreferrer" // Buenas prácticas
             // Estilo del botón: borde, texto, padding, hover

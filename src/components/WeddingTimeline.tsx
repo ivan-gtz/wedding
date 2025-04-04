@@ -22,7 +22,7 @@ const WeddingTimelineResponsive: React.FC = () => {
   const desktopLineVerticalPosition = '114px';
 
   return (
-    <div className="w-full mx-auto py-12 px-4 bg-gray-50 font-sans">
+    <div className="w-full mx-auto py-12 px-4 font-sans">
       <p className={`${tangFont.className} text-6xl text-center mb-10`}>Itinerario</p>
       <div className="relative md:block mx-20">
 
