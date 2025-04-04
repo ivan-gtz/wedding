@@ -1,4 +1,5 @@
 // components/DateDisplay.tsx
+import { testFont } from '@/config/fonts';
 import React from 'react';
 
 interface DateDisplayProps {
@@ -17,9 +18,7 @@ const DateDisplay: React.FC<DateDisplayProps> = ({
   time,
 }) => {
   return (
-    // Contenedor principal: Flexbox para alinear horizontalmente, centrar verticalmente
-    // Ajusta gap, fuente y color base según tus fuentes/colores configurados
-    <div className="flex items-center justify-center gap-5 sm:gap-8 font-serif text-stone-600"> {/* Usa tu fuente serif */}
+    <div className={`${testFont.className} flex items-center justify-center gap-5 sm:gap-8 text-stone-600`}>
 
       {/* Sección Izquierda: Día de la Semana */}
       <div className="text-right uppercase tracking-wider text-sm sm:text-base">

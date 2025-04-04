@@ -1,85 +1,97 @@
 import React from 'react';
 import Image from 'next/image';
+import { titleFont } from '@/config/fonts';
 
 interface TimelineEvent {
   time: string;
   event: string;
-  icon: string; 
+  icon: string;
 }
 
 const timelineData: TimelineEvent[] = [
-  { time: "10:00 AM", event: "Consejo bíblico", icon: "/icons/bible.png" }, 
-  { time: "02:00 PM", event: "Recepción", icon: "/icons/reception.png" },      
-  { time: "03:00 PM", event: "Vals", icon: "/icons/vals3.png" },          
-  { time: "03:30 PM", event: "Cena", icon: "/icons/dinner.png" },      
-  { time: "05:00 PM", event: "Fiesta", icon: "/icons/party.png" },      
-  { time: "10:00 PM", event: "Nos despedimos", icon: "/icons/theEnd.png" }, 
+    { time: "11:00 AM", event: "Consejo bíblico", icon: "/icons/bible.png" },
+    { time: "02:00 PM", event: "Recepción", icon: "/icons/reception.png" },
+    { time: "03:00 PM", event: "Vals", icon: "/icons/vals3.png" },
+    { time: "03:30 PM", event: "Cena", icon: "/icons/dinner.png" },
+    { time: "05:00 PM", event: "Fiesta", icon: "/icons/party.png" },
+    { time: "10:00 PM", event: "Nos despedimos", icon: "/icons/theEnd.png" },
 ];
 
 const WeddingTimelineResponsive: React.FC = () => {
-  const desktopLineVerticalPosition = '113px';
+  // Recalculado basado en h-[100px] (100px) + mb-2 (8px) + h-3/2 (6px) = 114px
+  const desktopLineVerticalPosition = '114px';
 
   return (
-    <div className="w-full max-w-5xl mx-auto py-12 px-4 bg-gray-50 font-sans">
-      <div className="relative md:block">
-        {/* --- Línea Horizontal (Desktop) --- */}
+    <div className="w-full mx-auto py-12 px-4 bg-gray-50 font-sans">
+      <p></p>
+      <div className="relative md:block mx-20">
+
+        {/* Línea horizontal para desktop */}
         <div
-          className="hidden md:block absolute left-0 right-0 h-0.5 bg-black z-0"
-          style={{ top: desktopLineVerticalPosition, transform: 'translateY(-50%)' }}
+          className="hidden md:block absolute h-px bg-black z-0"
+          style={{
+            left: '8%',
+            right: '9%',
+            top: desktopLineVerticalPosition,
+            transform: 'translateY(-50%)',
+          }}
         ></div>
 
-        {/* --- Contenedor de Items --- */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start relative z-10 space-y-12 md:space-y-0">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start relative z-10 space-y-8 md:space-y-0">
           {timelineData.map((item, index) => (
             <div
               key={index}
               className="flex items-start md:flex-col md:items-center md:w-1/5 px-2 relative"
             >
-              {/* --- Línea Vertical (Mobile) --- */}
-              <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-black md:hidden z-0">
-                {index === 0 && <div className="absolute top-0 left-0 w-full h-8 bg-gray-50"></div>}
-                {index === timelineData.length - 1 && <div className="absolute bottom-0 left-0 w-full h-full top-8 bg-gray-50"></div>}
-              </div>
+              {/* Líneas verticales para móvil */}
+              {index < timelineData.length - 1 && (
+                <div
+                  className="absolute w-px bg-black md:hidden z-0"
+                  style={{
+                    left: '6rem', // Ajustado para alinear con nuevo layout
+                    top: '1rem',
+                    bottom: '-3rem',
+                  }}
+                ></div>
+              )}
 
-              {/* --- Contenedor Punto & Icono (Desktop) --- */}
-              <div className="flex-shrink-0 md:flex-col md:items-center relative z-10">
-                 {/* Icon Container (Desktop) - Usando Next/Image */}
-                 <div className="hidden md:flex h-25 w-25 items-center justify-center mb-2 relative"> {/* Añadido w-12 y relative */}
-                    {/* Reemplazado SVG con Image */}
-                    <Image
-                        src={item.icon}
-                        alt={item.event} // Alt text descriptivo
-                        width={100} // Ancho deseado en píxeles
-                        height={100} // Alto deseado en píxeles
-                        className="object-contain" // Ajusta cómo se escala la imagen si no es cuadrada
-                    />
-                 </div>
-                 {/* Dot */}
-                 <div className="w-3 h-3 bg-black rounded-full mt-6 md:mt-0 md:mb-2 flex-shrink-0 translate-x-[1.125rem] md:translate-x-10"></div> {/* Ajustaste md:translate-x-3, lo dejo así */}
-              </div>
-
-
-
-              {/* --- Contenido (Icono Mobile, Texto) --- */}
-              <div className="ml-8 md:ml-0 md:text-center flex-grow">
-                {/* Icon (Mobile) - Usando Next/Image */}
-                <div className="flex md:hidden items-center justify-start mb-1 h-10 w-10 relative"> {/* Añadido w-10 y relative */}
-                     {/* Reemplazado SVG con Image */}
-                     <Image
-                         src={item.icon}
-                         alt={item.event}
-                         width={32} // Ancho deseado en píxeles (más pequeño para móvil)
-                         height={32} // Alto deseado en píxeles
-                         className="object-contain"
-                     />
+              {/* Contenedor principal móvil */}
+              <div className="flex md:contents">
+                {/* Icono móvil */}
+                <div className="flex md:hidden items-center h-[90px] w-[90px]">
+                  <Image
+                    src={item.icon}
+                    alt={item.event}
+                    width={100}
+                    height={100}
+                  />
                 </div>
 
-                {/* Time */}
-                <div className="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">{item.time}</div>
+                {/* Punto y contenido */}
+                <div className="flex flex-col md:flex-col md:items-center w-full">
+                  <div className="flex-shrink-0 md:flex-col md:items-center relative z-10">
+                    {/* Icono desktop */}
+                    <div className="hidden md:flex h-[100px] w-[100px] items-center justify-center mb-2 relative">
+                      <Image
+                        src={item.icon}
+                        alt={item.event}
+                        width={100}
+                        height={100}
+                        className="object-contain"
+                      />
+                    </div>
+                    
+                    {/* Punto del timeline */}
+                    <div className="w-3 h-3 bg-black rounded-full mt-2 md:mt-0 md:mb-2 translate-x-[1.28rem] md:translate-x-10"></div>
+                  </div>
 
-                {/* Event Name */}
-                <div className="text-sm md:text-base font-medium text-gray-800 mt-1 tracking-wide">
-                  {item.event}
+                  {/* Contenido */}
+                  <div className="ml-15 md:ml-0 md:text-center flex-grow">
+                    <div className="text-xs md:text-sm text-gray-600 md:mt-2">{item.time}</div>
+                    <div className={`${titleFont.className} text-sm md:text-base font-medium text-gray-800 tracking-wide`}>
+                      {item.event}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
