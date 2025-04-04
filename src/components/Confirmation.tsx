@@ -1,6 +1,10 @@
 // components/ConfirmAttendance.tsx
+import { testFont, titleFont } from '@/config/fonts';
 import React from 'react';
 import { BsCalendarHeart } from 'react-icons/bs'; // Importa el icono
+import { LuTickets } from "react-icons/lu";
+import { TbCardsFilled, TbCards } from "react-icons/tb";
+
 
 interface ConfirmAttendanceProps {
   // Puedes pasar la fecha límite y el enlace como props para mayor flexibilidad
@@ -19,18 +23,20 @@ const ConfirmAttendance: React.FC<ConfirmAttendanceProps> = ({
   // Asegúrate de reemplazar TUNUMERODETELEFONO o usa el confirmationLink directamente si es un formulario
 
   return (
-    <section className="bg-brand-background-light py-16 md:py-20 px-4 text-center">
+    <section className="py-16 md:py-20 px-4 text-center bg-gray-100">
       <div className="max-w-md mx-auto"> {/* Limita el ancho */}
         <div>
+          <TbCards className="w-12 h-12 md:w-18 md:h-18 text-brand-icon-color mx-auto mb-6" />
+
           <h1 className="font-serif text-lg md:text-xl font-medium uppercase tracking-widest text-brand-text-title mb-4">
             Pases
           </h1>
-          <h1 className="font-serif text-lg md:text-6xl font-medium uppercase tracking-widest text-brand-text-title mb-4">
-            2
-          </h1>
-          <h1 className="font-serif text-lg md:text-xl font-medium uppercase tracking-widest text-brand-text-title mb-4">
-            Lugares para tí
-          </h1>
+          <p className={`${titleFont.className} text-center font-semibold my-2`}>Tenemos reservado</p>
+          <div className="flex flex-row place-content-center mb-4">
+            <p className={`${titleFont.className} mx-2 font-medium text-2xl`}>para ti</p>
+            <p className={`${titleFont.className} mx-2 font-semibold text-4xl`}>2</p>
+            <p className={`${titleFont.className} mx-2 font-medium text-2xl`}>lugares</p>
+          </div>
 
         </div>
         {/* Icono */}
@@ -43,7 +49,7 @@ const ConfirmAttendance: React.FC<ConfirmAttendanceProps> = ({
 
         {/* Fecha Límite */}
         <p className="font-serif text-base text-brand-text-body mb-8">
-          Por favor, confirmar antes del {deadline}
+          Por favor, confirma tu asistencia hasta el {deadline}
         </p>
 
         {/* Botón de Confirmación */}

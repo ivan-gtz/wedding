@@ -1,5 +1,5 @@
 "use cliente"
-import { goodFont, tangFont, titleFont } from "@/config/fonts"
+import { ariFont, goodFont, tangFont, titleFont } from "@/config/fonts"
 import { motion } from "framer-motion"
 import DateDisplay from "./DataDisplay"
 import MusicPlayer from "./MusicPlayer"
@@ -42,9 +42,9 @@ export const ShowFirst = () => {
                     ease: [0.16, 0.77, 0.47, 0.97],
                     delay: 0
                 }}
-                className={`${tangFont.className} text-[90px] text-stone-600 text-center mt-5 mr-1`}
+                className={`${ariFont.className} text-[65px] text-stone-600 text-center mt-5 mr-1`}
             >
-                Oscar & Liceths
+                Oscar & Liceth
             </motion.p>
             <motion.div 
                 className="flex justify-center items-center mt-5"

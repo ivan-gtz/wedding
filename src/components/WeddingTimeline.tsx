@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { titleFont } from '@/config/fonts';
+import { goodFont, tangFont, titleFont } from '@/config/fonts';
 
 interface TimelineEvent {
   time: string;
@@ -23,7 +23,7 @@ const WeddingTimelineResponsive: React.FC = () => {
 
   return (
     <div className="w-full mx-auto py-12 px-4 bg-gray-50 font-sans">
-      <p></p>
+      <p className={`${tangFont.className} text-6xl text-center mb-10`}>Itinerario</p>
       <div className="relative md:block mx-20">
 
         {/* Línea horizontal para desktop */}

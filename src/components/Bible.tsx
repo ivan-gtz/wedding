@@ -1,3 +1,4 @@
+import { loraFont, tangFont, titleFont } from '@/config/fonts'
 import { motion } from 'framer-motion'
 // import { Cross1Icon } from '@radix-ui/react-icons' // o cualquier icono de cruz
 
@@ -15,16 +16,16 @@ export const Bible = () => {
 
       {/* Contenido principal */}
       <div className="space-y-6 text-center">
-        <h3 className="text-xl md:text-2xl font-serif italic font-medium text-gray-700 leading-relaxed">
+        <h3 className="text-4xl md:text-5xl italic font-medium text-black leading-tight">
 
-          <span className="block text-gray-600">
+          <span className={`${ tangFont.className } block`}>
           Mejor son dos que uno solo, porque tienen un mayor beneficio por su duro trabajo. Y es que, si uno de ellos cae, el otro puede ayudar a su compañero a levantarse.
           </span>
         </h3>
 
         {/* Referencia bíblica */}
-        <p className="text-sm md:text-base font-sans uppercase tracking-wide text-gray-700 font-semibold">
-          Eclesiastés 4:9-10
+        <p className={`${titleFont.className} text-sm md:text-base font-sans uppercase tracking-wide text-gray-900 font-bold`}>
+          (Eclesiastés 4:9-10)
         </p>
       </div>
 

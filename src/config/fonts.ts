@@ -1,4 +1,4 @@
-import { Inter, Montserrat_Alternates, Cinzel, Great_Vibes, Alex_Brush, Lora, Italianno, Tangerine } from "next/font/google";
+import { Inter, Montserrat_Alternates, Cinzel, Great_Vibes, Alex_Brush, Lora, Italianno, Tangerine, Arizonia } from "next/font/google";
 
 
 export const inter = Inter({ subsets: ["latin"] });
@@ -31,6 +31,11 @@ export const italoFont = Italianno({
 })
 
 export const tangFont = Tangerine({
+    subsets: ['latin'],
+    weight: ['400']
+})
+
+export const ariFont = Arizonia({
     subsets: ['latin'],
     weight: ['400']
 })
