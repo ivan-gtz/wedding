@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { goodFont, tangFont, titleFont } from '@/config/fonts';
+import { tangFont, titleFont } from '@/config/fonts';
 
 interface TimelineEvent {
   time: string;

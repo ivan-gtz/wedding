@@ -1,4 +1,4 @@
-import { nameFont, tangFont, testFont, titleFont } from '@/config/fonts';
+import { tangFont, testFont, titleFont } from '@/config/fonts';
 import React from 'react';
 // Importa tus fuentes si usas next/font
 // import { Great_Vibes, Playfair_Display } from 'next/font/google';

@@ -1,4 +1,4 @@
-import { goodFont, tangFont, titleFont } from "@/config/fonts"
+import { tangFont, titleFont } from "@/config/fonts"
 import CountdownTimer from "./CoutDownTimer";
 import StyledCalendar from "./StyledCalendar";
 

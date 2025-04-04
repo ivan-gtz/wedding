@@ -1,5 +1,5 @@
 "use client"
-import { tangFont, testFont, titleFont } from '@/config/fonts';
+import { tangFont, titleFont } from '@/config/fonts';
 import React from 'react';
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";

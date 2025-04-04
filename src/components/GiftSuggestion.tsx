@@ -1,10 +1,8 @@
 // components/GiftSuggestion.tsx
 import React from 'react';
 import Image from 'next/image'; // Importa el componente Image de Next.js
-import { FaGift } from 'react-icons/fa'; // Icono de regalo
 import { BsEnvelopeHeart } from 'react-icons/bs'; // Icono de sobre con corazón
 import { ariFont, titleFont } from '@/config/fonts';
-import { ImGift } from "react-icons/im";
 
 const GiftSuggestion = () => {
   // ¡IMPORTANTE! Reemplaza esta ruta con la ubicación real de tu imagen en la carpeta /public

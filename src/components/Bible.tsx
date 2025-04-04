@@ -1,4 +1,4 @@
-import { loraFont, tangFont, titleFont } from '@/config/fonts'
+import { tangFont, titleFont } from '@/config/fonts'
 import { motion } from 'framer-motion'
 // import { Cross1Icon } from '@radix-ui/react-icons' // o cualquier icono de cruz
 

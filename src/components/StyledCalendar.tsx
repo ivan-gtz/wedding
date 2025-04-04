@@ -28,7 +28,7 @@ const StyledCalendar: React.FC<StyledCalendarJuneProps> = ({ highlightDay }) => 
   const bgColor = 'bg-stone-50';         // Fondo beige muy claro
   const textColor = 'text-zinc-500';     // Texto marrón oscuro (días, números)
   const borderColor = 'border-amber-950'; // Borde marrón oscuro
-  const highlightBgColor = 'text-stone-400'; // Corazón marrón más suave
+  // const highlightBgColor = 'text-stone-400'; // Corazón marrón más suave
   const highlightTextColor = 'text-stone-50'; // Texto sobre corazón (o text-white)
 
   return (

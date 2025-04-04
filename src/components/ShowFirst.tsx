@@ -1,5 +1,5 @@
 "use cliente"
-import { ariFont, goodFont, tangFont, titleFont } from "@/config/fonts"
+import { ariFont, tangFont, titleFont } from "@/config/fonts"
 import { motion } from "framer-motion"
 import DateDisplay from "./DataDisplay"
 import MusicPlayer from "./MusicPlayer"

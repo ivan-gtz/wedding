@@ -1,8 +1,6 @@
 "use client"
-import Image from "next/image";
 import WeddingTimeline from "@/components/WeddingTimeline";
 import DressCode from "@/components/DressCode";
-import { FaGlassCheers } from "react-icons/fa";
 import ConfirmAttendance from "@/components/Confirmation";
 import GiftSuggestion from "@/components/GiftSuggestion";
 import { PhotoFirst } from "@/components/images/PhotoFirt";

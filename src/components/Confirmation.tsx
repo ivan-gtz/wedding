@@ -1,9 +1,8 @@
 // components/ConfirmAttendance.tsx
-import { testFont, titleFont } from '@/config/fonts';
+import { titleFont } from '@/config/fonts';
 import React from 'react';
 import { BsCalendarHeart } from 'react-icons/bs'; // Importa el icono
-import { LuTickets } from "react-icons/lu";
-import { TbCardsFilled, TbCards } from "react-icons/tb";
+import { TbCards } from "react-icons/tb";
 
 
 interface ConfirmAttendanceProps {

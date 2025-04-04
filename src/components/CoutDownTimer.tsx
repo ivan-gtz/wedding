@@ -1,6 +1,6 @@
 "use client";
 
-import { goodFont, loraFont, nameFont, titleFont } from '@/config/fonts';
+import { titleFont } from '@/config/fonts';
 import React, { useState, useEffect } from 'react';
 
 // Interfaces (sin cambios)
