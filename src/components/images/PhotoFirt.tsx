@@ -19,7 +19,7 @@ export const PhotoFirst = () => {
                 className="w-full h-full"
             >
                 <Image
-                    src="/imgs/boda1.jpg"
+                    src="/imgs/boda1.JPG"
                     alt="imagen de la boda 4"
                     priority={true}
                     width={1920}
