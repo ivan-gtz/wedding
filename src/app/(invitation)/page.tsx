@@ -1,6 +1,7 @@
 "use client";
 import WeddingTimeline from "@/components/WeddingTimeline";
 import DressCode from "@/components/DressCode";
+import { motion, useScroll } from "framer-motion";
 import GiftSuggestion from "@/components/GiftSuggestion";
 import { PhotoFirst } from "@/components/images/PhotoFirt";
 import { ShowFirst } from "@/components/ShowFirst";
@@ -11,7 +12,20 @@ import OurParents from "@/components/OurParents";
 import { Suspense } from 'react';
 import PassesHandler from "@/components/PassesHandler";
 
+const SlideUpText = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-20%" }}
+    transition={{ duration: 0.8, delay, ease: "easeOut" }}
+    className="w-full"
+  >
+    {children}
+  </motion.div>
+);
+
 export default function HomePage() {
+  const { scrollYProgress } = useScroll();
   const rsvpDeadline = "10 de Mayo de 2025";
   const rsvpLink = `https://wa.me/63951215?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
   const rsvpLink2 = `https://wa.me/67437595?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
@@ -20,19 +34,27 @@ export default function HomePage() {
     <div className="">
       <PhotoFirst />
       <ShowFirst />
-      <Showsecond />
-      <PhotoSecond />
-      <PhotoThird />
-      <div>
+
+      <SlideUpText delay={0.2}>
+        <Showsecond />
+      </SlideUpText>
+
+      <SlideUpText delay={0.2}>
+        <PhotoSecond />
+      </SlideUpText>
+      <SlideUpText delay={0.2}>
+        <PhotoThird />
+      </SlideUpText>
+      <SlideUpText delay={0.2}>
         <OurParents />
-      </div>
-      <div>
+      </SlideUpText>
+      <SlideUpText delay={0.2}>
         <WeddingTimeline />
-      </div>
-      <div>
+      </SlideUpText>
+      <SlideUpText delay={0.2}>
         <DressCode />
-      </div>
-      <div>
+      </SlideUpText>
+      <SlideUpText delay={0.2}>
         <Suspense fallback={<div>Cargando confirmación...</div>}>
           <PassesHandler
             defaultPasses={1}
@@ -41,10 +63,12 @@ export default function HomePage() {
             rsvpLink2={rsvpLink2}
           />
         </Suspense>
-      </div>
-      <div>
+      </SlideUpText>
+      <SlideUpText delay={0.4}>
+
         <GiftSuggestion />
-      </div>
+      </SlideUpText>
+
     </div>
   );
 }

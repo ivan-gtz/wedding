@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oscar & Liceth",
     description: "Tenemos el honor de invitarte a nuestra boda",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/public/imgs/boda1.JPG`]
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/imgs/boda1.JPG`]
   }
 };
 
