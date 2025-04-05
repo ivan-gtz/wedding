@@ -1,12 +1,12 @@
 "use client"
-import { tangFont, titleFont } from '@/config/fonts';
+import { garaFont, tangFont, titleFont } from '@/config/fonts';
 import React from 'react';
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 
 const addressLines = [
-  "Jalta Cotacachi",
+  "Casona Campestre",
 
 ];
 const addressJW = [
@@ -19,7 +19,7 @@ const OurParents: React.FC = () => {
   const cardStyle = "border border-stone-300 rounded-lg p-6 md:p-8 flex flex-col items-center text-center shadow-lg";
   const iconStyle = "h-12 w-12 text-slate-500 mb-5"; // Adjusted size and margin
   const titleStyle = "text-xl md:text-2xl text-slate-500 mb-3 uppercase tracking-wide";
-  const textStyle = "text-sm md:text-base text-stone-700 font-serif max-w-xs"; // Constrain text width slightly
+  const textStyle = "text-lg text-stone-700 font-serif max-w-xs"; // Constrain text width slightly
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -34,17 +34,17 @@ const OurParents: React.FC = () => {
             Nuestros padres
           </h2>
           <p className={`${tangFont.className} text-4xl`}>Del Novio</p>
-          <p className={`${textStyle} font-serif`}>
+          <p className={`${textStyle} ${garaFont.className}`}>
             Guillermo Basilio Amador
           </p>
-          <p className={`${textStyle} font-serif mb-4`}>
+          <p className={`${textStyle} ${garaFont.className} mb-4`}>
             Natividad Felix De Basilio
           </p>
           <p className={`${tangFont.className} text-4xl`}>De la Novia</p>
-          <p className={`${textStyle} font-serif`}>
+          <p className={`${textStyle} ${garaFont.className}`}>
             Daniel Ramirez Lluzco
           </p>
-          <p className={`${textStyle} font-serif`}>
+          <p className={`${textStyle} ${garaFont.className}`}>
             Florinda Vargas De Ramirez
           </p>
         </div>
@@ -57,7 +57,7 @@ const OurParents: React.FC = () => {
           <h2 className={`${titleStyle} ${titleFont.className} font-medium`}>
             Consejo bíblico
           </h2>
-          <div className="font-serif text-sm md:text-base text-brand-text-body leading-normal mb-6"> {/* Estilo de la dirección */}
+          <div className={`${garaFont.className} font-serif text-lg md:text-base text-brand-text-body leading-normal mb-6`}> {/* Estilo de la dirección */}
             {addressJW.map((line, index) => (
               // Renderiza cada línea de la dirección en un párrafo separado
               <p key={index}>{line}</p>
@@ -88,7 +88,7 @@ const OurParents: React.FC = () => {
           <h2 className={`${titleStyle} ${titleFont.className} font-medium`}>
             Recepción
           </h2>
-          <div className="font-serif text-sm md:text-base text-brand-text-body leading-normal mb-6"> {/* Estilo de la dirección */}
+          <div className={`${garaFont.className} font-serif text-lg md:text-base text-brand-text-body leading-normal mb-6`}> {/* Estilo de la dirección */}
             {addressLines.map((line, index) => (
               // Renderiza cada línea de la dirección en un párrafo separado
               <p key={index}>{line}</p>
@@ -108,8 +108,8 @@ const OurParents: React.FC = () => {
           >
             Como llegar
           </a>
-          <p className="text-sm italic font-serif text-gray-600 mt-5 max-w-md">
-            Luego del consejo bíblico rogamos encarecidamente que puedan pasar directamente al salón de evento ya que se servirá un aperitivo y acto seguido la recepción
+          <p className={`text-sm italic font-serif text-gray-600 mt-5 max-w-md`}>
+            Luego del consejo bíblico, los invitamos a pasar directamente al salón de eventos a servirse un pareritivo y a continuación se procederá con la recepción.
           </p>
         </div>
 

@@ -6,7 +6,7 @@ export const PhotoFirst = () => {
 
     return (
         <motion.div 
-            className="backdrop-contrast-125 md:backdrop-contrast-150 h-[55vh] md:h-auto overflow-hidden"
+            className="backdrop-contrast-125 md:backdrop-contrast-150 h-[40vh] md:h-auto overflow-hidden"
         >
             <motion.div
                 initial={{ scale: 1.16 }}
@@ -27,7 +27,7 @@ export const PhotoFirst = () => {
                     className="w-full h-full md:h-auto object-cover -scale-x-100"
                     sizes="(max-width: 768px) 100vw, 100vw"
                     style={{
-                        objectPosition: '98% center',
+                        objectPosition: '90% center',
                     }}
                 />
             </motion.div>

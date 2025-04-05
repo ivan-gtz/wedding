@@ -10,7 +10,7 @@ interface TimelineEvent {
 
 const timelineData: TimelineEvent[] = [
     { time: "11:00 AM", event: "Consejo bíblico", icon: "/icons/bible.png" },
-    { time: "02:00 PM", event: "Recepción", icon: "/icons/reception.png" },
+    { time: "02:00 PM", event: "Recepción", icon: "/icons/reception1.png" },
     { time: "03:00 PM", event: "Vals", icon: "/icons/vals3.png" },
     { time: "03:30 PM", event: "Cena", icon: "/icons/dinner.png" },
     { time: "05:00 PM", event: "Fiesta", icon: "/icons/party.png" },

@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image'; // Importa el componente Image de Next.js
 import { BsEnvelopeHeart } from 'react-icons/bs'; // Icono de sobre con corazón
-import { ariFont, titleFont } from '@/config/fonts';
+import { ariFont, garaFont, titleFont } from '@/config/fonts';
 
 const GiftSuggestion = () => {
   // ¡IMPORTANTE! Reemplaza esta ruta con la ubicación real de tu imagen en la carpeta /public
@@ -26,12 +26,12 @@ const GiftSuggestion = () => {
         <BsEnvelopeHeart className="w-12 h-12 md:w-12 md:h-12 text-brand-icon-color mx-auto mb-8" />
 
         {/* Mensaje Principal */}
-        <p className="font-serif text-lg md:text-xl font-semibold text-brand-text-body mb-2">
+        <p className={`${garaFont.className} font-serif text-2xl md:text-2xl font-semibold text-brand-text-body mb-2`}>
           Tu presencia es nuestro mayor regalo
         </p>
 
         {/* Mensaje Secundario (efectivo) */}
-        <p className="font-serif text-base text-brand-text-body mb-8 leading-relaxed">
+        <p className={`${garaFont.className} font-serif text-xl text-brand-text-body mb-8 leading-relaxed`}>
           Si deseas obsequiarnos algún presente<br /> agradeceríamos que fuera en efectivo
         </p>
         <div className='relative inline-block'>
@@ -40,7 +40,7 @@ const GiftSuggestion = () => {
             alt={'sugerencia de ragalo'}
             width={450}          
             height={450}
-            className="block"
+            className="block rounded-xl shadow-sm"
           />
         </div>
 
