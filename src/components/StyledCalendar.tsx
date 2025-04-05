@@ -1,4 +1,5 @@
 // components/StyledCalendarJune.tsx
+import { motion } from "framer-motion"
 import { titleFont } from '@/config/fonts';
 import React from 'react';
 import { FaHeart } from "react-icons/fa6";
@@ -15,9 +16,9 @@ const StyledCalendar: React.FC<StyledCalendarJuneProps> = ({ highlightDay }) => 
   // Necesitamos 6 nulls al inicio. Junio tiene 30 días. Total 36 celdas.
   // Necesitamos 6 filas * 7 columnas = 42 celdas. Añadir 6 nulls al final.
   const monthDays = [
-    1, 
-     2,  3,  4,  5,  6,  7,  8,          // Semana 2
-     9, 10, 11, 12, 13, 14, 15,          // Semana 3
+    1,
+    2, 3, 4, 5, 6, 7, 8,          // Semana 2
+    9, 10, 11, 12, 13, 14, 15,          // Semana 3
     16, 17, 18, 19, 20, 21, 22,          // Semana 4
     23, 24, 25, 26, 27, 28, 29,          // Semana 5
     30,
@@ -65,10 +66,21 @@ const StyledCalendar: React.FC<StyledCalendarJuneProps> = ({ highlightDay }) => 
               day === highlightDay ? (
                 <>
                   {/* Icono corazón de fondo */}
-                  <FaHeart
-                    style={{ color: "#A2846F" }}
-                    size={ 35 }
-                  />
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.2, 1], // Escala de animación
+                      transition: {
+                        duration: 1,       // Duración de cada ciclo
+                        repeat: Infinity,  // Repetir infinitamente
+                        ease: "easeInOut"  // Suavizado de la animación
+                      }
+                    }}
+                  >
+                    <FaHeart
+                      style={{ color: "#A2846F" }}
+                      size={35}
+                    />
+                  </motion.div>
                   {/* Número encima */}
                   <span className={`absolute z-10 font-semibold ${highlightTextColor} ${titleFont.className}`}>
                     {day}

@@ -109,7 +109,7 @@ const OurParents: React.FC = () => {
             Como llegar
           </a>
           <p className={`text-sm italic font-serif text-gray-600 mt-5 max-w-md`}>
-            Luego del consejo bíblico, los invitamos a pasar directamente al salón de eventos a servirse un pareritivo y a continuación se procederá con la recepción.
+            Luego del consejo bíblico, los invitamos a pasar directamente al salón de eventos a servirse un aperitivo y a continuación se procederá con la recepción.
           </p>
         </div>
 
