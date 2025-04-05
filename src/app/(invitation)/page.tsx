@@ -1,7 +1,7 @@
 "use client";
 import WeddingTimeline from "@/components/WeddingTimeline";
 import DressCode from "@/components/DressCode";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import GiftSuggestion from "@/components/GiftSuggestion";
 import { PhotoFirst } from "@/components/images/PhotoFirt";
 import { ShowFirst } from "@/components/ShowFirst";
@@ -25,7 +25,7 @@ const SlideUpText = ({ children, delay = 0 }: { children: React.ReactNode; delay
 );
 
 export default function HomePage() {
-  const { scrollYProgress } = useScroll();
+  // const { scrollYProgress } = useScroll();
   const rsvpDeadline = "10 de Mayo de 2025";
   const rsvpLink = `https://wa.me/63951215?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
   const rsvpLink2 = `https://wa.me/67437595?text=${encodeURIComponent("Confirmo asistencia a la boda!")}`;
