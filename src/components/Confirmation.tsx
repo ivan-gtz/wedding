@@ -25,7 +25,7 @@ const ConfirmAttendance: React.FC<ConfirmAttendanceProps> = ({
     <section className="py-16 md:py-20 px-4 text-center bg-gray-100">
       <div className="max-w-md mx-auto"> {/* Limita el ancho */}
         <div>
-          <TbCards className="w-12 h-12 md:w-18 md:h-18 text-brand-icon-color mx-auto mb-6" />
+          <TbCards className="w-14 h-14 md:w-18 md:h-18 text-brand-icon-color mx-auto mb-6" />
 
           <h1 className="font-serif text-lg md:text-xl font-medium uppercase tracking-widest text-brand-text-title mb-4">
             Pases

@@ -23,7 +23,7 @@ const GiftSuggestion = () => {
         </h3>
 
         {/* Icono de Sobre (Separador) */}
-        <BsEnvelopeHeart className="w-10 h-10 md:w-12 md:h-12 text-brand-icon-color mx-auto mb-8" />
+        <BsEnvelopeHeart className="w-12 h-12 md:w-12 md:h-12 text-brand-icon-color mx-auto mb-8" />
 
         {/* Mensaje Principal */}
         <p className="font-serif text-lg md:text-xl font-semibold text-brand-text-body mb-2">
