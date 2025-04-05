@@ -6,10 +6,20 @@ export const metadata: Metadata = {
   title: "Oscar & Liceth",
   description: "Tenemos el honor de invitarte a nuestra boda",
   openGraph: {
-    title: "Oscar & Liceth",
+    title: "Óscar & Liceth",
     description: "Tenemos el honor de invitarte a nuestra boda",
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/imgs/boda1.JPG`]
-  }
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/imgs/boda1.JPG`, // Ruta corregida
+        width: 1200,
+        height: 630,
+        alt: 'Invitación de boda Óscar y Liceth',
+      }
+    ],
+    type: 'website',
+    siteName: 'Boda Óscar & Liceth',
+  },
 };
 
 export default function RootLayout({
