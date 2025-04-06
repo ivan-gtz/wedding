@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: process.env.NEXT_PUBLIC_SITE_URL,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/imgs/boda1.JPG`, // Ruta corregida
+        url: `https://nuestraboda-oyl.vercel.app/imgs/boda1.JPG`, // Ruta corregida
         width: 1200,
         height: 630,
         alt: 'Invitación de boda Óscar y Liceth',
