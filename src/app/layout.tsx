@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Oscar & Liceth",
   description: "Tenemos el honor de invitarte a nuestra boda",
   openGraph: {
-    title: "Óscar & Liceth",
+    title: "Oscar & Liceth",
     description: "Tenemos el honor de invitarte a nuestra boda",
     url: process.env.NEXT_PUBLIC_SITE_URL,
     images: [
