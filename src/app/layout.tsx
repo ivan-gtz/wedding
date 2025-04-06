@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       }
     ],
     type: 'website',
-    siteName: 'Boda Óscar & Liceth',
+    siteName: 'Boda Oscar & Liceth',
   },
 };
 

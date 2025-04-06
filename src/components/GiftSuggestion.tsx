@@ -58,7 +58,7 @@ const GiftSuggestion = () => {
         />
       </div>
 
-      {/* Texto de Agradecimiento Inferior */}
+      {/* Texto de Agradecimiento Inferior modificado */}
       {/* Solución simple con margen negativo para superponer ligeramente */}
        <div className="relative z-10 max-w-lg mx-auto px-4 mt-[-2rem] md:mt-[1.5rem]">
          <p className={`${ariFont.className} text-4xl md:text-6xl text-brand-text-title`}>
