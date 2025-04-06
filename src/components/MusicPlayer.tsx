@@ -56,6 +56,11 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.src = audioSrc;
+    }
+  }, [audioSrc]);
   // Carga metadatos y configura listeners
   useEffect(() => {
     const audio = audioRef.current;
@@ -63,9 +68,9 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
 
     const setAudioData = () => {
       if (audio.duration !== Infinity) { // Evita duración infinita (streams)
-         setDuration(audio.duration);
+        setDuration(audio.duration);
       }
-       setCurrentTime(audio.currentTime);
+      setCurrentTime(audio.currentTime);
     };
 
     const setAudioTime = () => {
@@ -74,16 +79,16 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
 
     // Asigna la fuente una sola vez si cambia
     if (audio.src !== audioSrc) {
-        audio.src = audioSrc;
-        setIsPlaying(false); // Resetea estado al cambiar src
-        setCurrentTime(0);
-        setDuration(0);
+      audio.src = audioSrc;
+      setIsPlaying(false); // Resetea estado al cambiar src
+      setCurrentTime(0);
+      setDuration(0);
     }
 
 
     audio.addEventListener('loadedmetadata', setAudioData);
     audio.addEventListener('timeupdate', setAudioTime);
-     // Listener para cuando la canción termina
+    // Listener para cuando la canción termina
     audio.addEventListener('ended', () => setIsPlaying(false));
 
 
@@ -95,22 +100,22 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
     };
   }, [audioSrc]); // Depende de audioSrc para recargar si cambia la canción
 
-  // Controla Play/Pause
-  useEffect(() => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.play().catch(error => {
-          console.error("Error al reproducir audio:", error);
-          setIsPlaying(false); // Vuelve a estado 'pausado' si hay error
-        });
-      } else {
-        audioRef.current.pause();
-      }
-    }
-  }, [isPlaying]);
+ 
 
   // Handler para Play/Pause
   const togglePlayPause = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      // iOS requiere que el play() sea llamado directamente desde el evento
+      audio.play().catch(error => {
+        console.error("Error al reproducir:", error);
+        // Muestra un mensaje al usuario si es necesario
+      });
+    }
     setIsPlaying(!isPlaying);
   };
 
@@ -127,8 +132,8 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
     const newTime = duration * percentage;
 
     if (isFinite(newTime)) {
-        audio.currentTime = newTime;
-        setCurrentTime(newTime); // Actualiza visualmente de inmediato
+      audio.currentTime = newTime;
+      setCurrentTime(newTime); // Actualiza visualmente de inmediato
     }
   }, [duration]); // Depende de duration
 
@@ -144,9 +149,9 @@ const MusicPlayer: React.FC<SimpleMusicPlayerProps> = ({ audioSrc }) => {
         aria-label={isPlaying ? 'Pause' : 'Play'}
       >
         {isPlaying
-           ? <PauseIcon className="w-7 h-7 md:w-6 md:h-6" />
-           : <PlayIcon className="w-7 h-7 md:w-6 md:h-6" />
-         }
+          ? <PauseIcon className="w-7 h-7 md:w-6 md:h-6" />
+          : <PlayIcon className="w-7 h-7 md:w-6 md:h-6" />
+        }
       </button>
 
       {/* Tiempo */}

@@ -7,7 +7,7 @@ import MusicPlayer from "./MusicPlayer"
 
 export const ShowFirst = () => {
 
-    const songUrl = '/audio/wedding.mpeg';
+    const songUrl = '/audio/music1.mp3';
 
     return (
         <motion.div
