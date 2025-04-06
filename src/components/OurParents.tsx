@@ -42,7 +42,7 @@ const OurParents: React.FC = () => {
           </p>
           <p className={`${tangFont.className} text-4xl`}>De la Novia</p>
           <p className={`${textStyle} ${garaFont.className}`}>
-            Daniel Ramirez Lluzco
+            Daniel Polonio Ramirez Llusco
           </p>
           <p className={`${textStyle} ${garaFont.className}`}>
             Florinda Vargas De Ramirez
