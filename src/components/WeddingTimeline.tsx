@@ -87,8 +87,8 @@ const WeddingTimelineResponsive: React.FC = () => {
 
                   {/* Contenido */}
                   <div className="ml-15 md:ml-0 md:text-center flex-grow">
-                    <div className="text-xs md:text-sm text-gray-600 md:mt-2">{item.time}</div>
-                    <div className={`${titleFont.className} text-sm md:text-base font-medium text-gray-800 tracking-wide`}>
+                    <div className="text-xs md:text-sm text-stone-600 md:mt-2">{item.time}</div>
+                    <div className={`${titleFont.className} text-sm md:text-base font-medium text-stone-800 tracking-wide`}>
                       {item.event}
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import { tangFont, testFont, titleFont } from '@/config/fonts';
+import { garaFont, tangFont, titleFont } from '@/config/fonts';
 import React from 'react';
 // Importa tus fuentes si usas next/font
 // import { Great_Vibes, Playfair_Display } from 'next/font/google';
@@ -20,7 +20,7 @@ const DressCode = () => {
       </h3>
 
       {/* --- Ilustraciones --- */}
-      <div className="flex justify-center items-end space-x-8 md:space-x-12 mb-10">
+      <div className="flex justify-center items-end space-x-8 md:space-x-12 mb-5">
         {/* Reemplaza src con la ruta a tus imágenes */}
         <img
           src="/icons/man.png" 
@@ -36,7 +36,7 @@ const DressCode = () => {
 
       {/* --- Nota sobre color --- */}
       {/* Aplica tu fuente serif itálica */}
-      <p className={`${testFont.className} text-base italic text-gray-700 mb-5 max-w-md`}>
+      <p className={`${garaFont.className} text-xl italic text-gray-700 mb-2 max-w-md`}>
         Hemos reservado el color BLANCO para la novia el color CELESTE para el novio.
       </p>
     </section>

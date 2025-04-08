@@ -68,7 +68,7 @@ const ConfirmAttendance: React.FC<ConfirmAttendanceProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center border border-brand-text-title text-brand-text-title
-                        font-serif text-sm uppercase tracking-wider font-medium
+                        font-serif text-sm uppercase tracking-wider font-medium rounded
                         py-2.5 px-6  /* Ajusta padding si es necesario */
                         hover:bg-brand-text-title hover:text-brand-background-light
                         transition-colors duration-200 ease-in-out
@@ -83,7 +83,7 @@ const ConfirmAttendance: React.FC<ConfirmAttendanceProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center border border-brand-text-title text-brand-text-title
-                        font-serif text-sm uppercase tracking-wider font-medium
+                        font-serif text-sm uppercase tracking-wider font-medium rounded
                         py-2.5 px-6  /* Ajusta padding si es necesario */
                         hover:bg-brand-text-title hover:text-brand-background-light
                         transition-colors duration-200 ease-in-out
