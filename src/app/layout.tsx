@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oscar & Liceth",
     description: "Tenemos el honor de invitarte a nuestra boda",
-    url: process.env.NEXT_PUBLIC_SITE_URL,
+    url: 'https://nuestraboda-oyl.vercel.app/imgs/linkboda.png',
     images: [
       {
-        url: `https://nuestraboda-oyl.vercel.app/imgs/boda1.JPG`, // Ruta corregida
+        url: `https://nuestraboda-oyl.vercel.app/imgs/linkboda.png`, // Ruta corregida
         width: 1200,
         height: 630,
         alt: 'Invitación de boda Óscar y Liceth',
